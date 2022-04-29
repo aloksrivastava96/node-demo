@@ -6,7 +6,6 @@ const geocode = require("./utils/geocode");
 
 // console.log(__dirname);
 // console.log(__filename);
-
 // console.log(path.join(__dirname, "../")); // joins: Joins and returns final path. (../ will go to parent dir.)
 // console.log(path.join(__dirname, "../public"));
 
