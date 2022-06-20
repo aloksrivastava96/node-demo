@@ -10,6 +10,7 @@ const geocode = require("./utils/geocode");
 // console.log(path.join(__dirname, "../public"));
 
 const app = express();
+const port = process.env.PORT || 3000; // Port Value of Heroku, if doesn't exist then 3000.
 
 // Define Path for Express Config:
 const publicDirPath = path.join(__dirname, "../public");
@@ -158,8 +159,13 @@ app.get("*", (req, res) => {
 });
 
 // Starting server
-app.listen(3000, () => {
-  console.log("Server is up on port 3000.");
+// app.listen(3000, () => {
+//   console.log("Server is up on port 3000.");
+// });
+
+// Adding heroku port defined
+app.listen(port, () => {
+  console.log("Server is up on port " + port);
 });
 
 // We can use nodemon to listen to changes without manually re-running the server.
